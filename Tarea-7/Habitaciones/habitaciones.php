@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if (isset($_SESSION['nombre'])) {
-include('../conexion.php');
+include('conexion.php');
 $sql = "SELECT id,habitacion,precio From tipohabitacion";
 $resultado=$con->query($sql);?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $resultado=$con->query($sql);?>
 	<body>
 		<center>
 			<h1>Habitaciones</h1>
-			<a href="../index.php">Volver</a>
+			<a href="index.php">Volver</a>
 		</center>
 		<hr>
 		<center>

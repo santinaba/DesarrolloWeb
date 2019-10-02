@@ -1,7 +1,7 @@
 <?php  session_start();
 if (isset($_SESSION['nombre']) and $_SESSION['nivel']==1 )
 {
-include('../conexion.php');
+include('conexion.php');
 $habitacion=$_POST["txtHabitacion"];
 $precio=$_POST["txtPrecio"];
 $id=$_POST["id"];

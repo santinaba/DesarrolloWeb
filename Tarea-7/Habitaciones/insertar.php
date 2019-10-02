@@ -1,4 +1,4 @@
-<?php include('../conexion.php');
+<?php include('conexion.php');
 $habitacion=$_POST["txtHabitacion"];
 $precio=$_POST["txtPrecio"];
 $sql="INSERT INTO tipohabitacion(habitacion,precio) values ('$habitacion',$precio)";

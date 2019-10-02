@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<center>
-			<h1>Hotel Transilvania</h1>
+			<h1>Hotel Tarabuco</h1>
 			<div class="contenedor">
 				<form action="autenticarse.php" method="POST">
 					<label for="txtUser">Ingresar correo</label><br>

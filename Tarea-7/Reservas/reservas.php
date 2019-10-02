@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if ($_SESSION['nivel']==0 || 1) { 
-	include('../conexion.php');
+	include('conexion.php');
 	$sql = "SELECT t.habitacion,r.fecha,r.dias FROM tipohabitacion t INNER JOIN reservas r on t.id=r.id_tipohabitacion";
  	$resultado=$con->query($sql);
 ?>
@@ -35,6 +35,6 @@ if ($_SESSION['nivel']==0 || 1) {
 </html> 
 <?php }
 	else {
-		header("Location:../index.php");
+		header("Location:index.php");
 	}
 ?>

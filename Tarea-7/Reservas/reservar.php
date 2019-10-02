@@ -10,13 +10,13 @@ if ($_SESSION['nivel']==0 || 1) {
 	</head>
 	<body>
 		<?php
-			include('../conexion.php'); 
+			include('conexion.php'); 
 			$sql = "SELECT id,habitacion from tipohabitacion";
 			$result=$con->query($sql);
 		?>
 		<center>
 			<h1>Reservar Habitacion</h1>
-			<a href="../index.php">VOLVER</a>
+			<a href="index.php">VOLVER</a>
 			<hr>
 			<form action="reserva.php" method="POST">
 				<label for="txtHabitacion">Habitacion</label>
@@ -36,6 +36,6 @@ if ($_SESSION['nivel']==0 || 1) {
 </html> 
 <?php }
 	else {
-		header("Location:../index.php");
+		header("Location:index.php");
 	}
 ?>

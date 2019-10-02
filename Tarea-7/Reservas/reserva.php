@@ -1,4 +1,4 @@
-<?php include('../conexion.php');
+<?php include('conexion.php');
 $fecha=$_POST['txtFecha'];
 $habitacion=$_POST["txtHabitacion"];
 $dia=$_POST["txtDia"];

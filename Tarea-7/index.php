@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<center>
-			<h1>Bienvenido al Hotel Transilvania</h1>
+			<h1>Bienvenido al Hotel Tarabuco</h1>
 			<h2>Usuario : <?php echo $_SESSION['nombre']; ?></h2>
 			<h2>Nivel: <?php if ($_SESSION['nivel']==1) 
 			{
