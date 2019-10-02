@@ -3,7 +3,7 @@ session_start();
 include('conexion.php');
 $email=$_POST['txtUser'];
 $password=md5($_POST['txtPassword']);
-	$sql="SELECT nombre,email,password,nivel FROM users WHERE email='$email' AND password='$password'" ;
+	$sql="SELECT nombre,email,password,nivel FROM users WHERE email='$email' AND password='$password'";
 	$result=$con->query($sql);
 	if($fila=$result->fetch_assoc())
 	{
