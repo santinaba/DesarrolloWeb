@@ -11,7 +11,7 @@ if ($_SESSION['nivel']==1) { ?>
 	<body>
 		<center>
 			<h1>Insertar Habitacion</h1>
-			<a href="../index.php">Volver</a>
+			<a href="index.php">Volver</a>
 			<hr>
 			<form action="insertar.php" method="POST">
 				<label for="txtHabitacion">Habitacion: </label>

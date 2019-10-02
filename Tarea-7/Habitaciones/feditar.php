@@ -3,7 +3,7 @@ session_start();
 if (!$_SESSION['nivel']==1) {
 	header("Location:login.php");
 }
-include('../conexion.php');
+include('conexion.php');
  $id=$_GET['id'];
  $sql = "SELECT id,habitacion,precio From tipohabitacion where id=".$id;
  $resultado=$con->query($sql);
@@ -18,7 +18,7 @@ include('../conexion.php');
 	<body>
 		<center>
 			<h1>Editar Habitacion</h1>
-			<a href="../index.php">Volver</a>
+			<a href="index.php">Volver</a>
 			<hr>
 			<form action="editar.php" method="POST">
 				<label for="txtHabitacion">Habitacion: </label>

@@ -34,8 +34,8 @@ $resultado=$con->query($sql);?>
 						<td><?php echo $d['habitacion']; ?></td>
 						<td><?php echo $d['precio']; ?></td>
 						<?php if ($_SESSION['nivel']==1) { ?>
-						<td> <a href="feditar.php?id=<?php echo $d['id'] ;  ?>">Editar</a> </td>
-						<td> <a href="eliminar.php?id=<?php echo $d['id'] ;  ?>">Eliminar</a> </td>
+						<td> <a href="feditar.php?id=<?php echo $d['id']; ?>">Editar</a> </td>
+						<td> <a href="eliminar.php?id=<?php echo $d['id']; ?>">Eliminar</a> </td>
 						<?php
 							} 
 						?>
@@ -59,6 +59,6 @@ $resultado=$con->query($sql);?>
 </html>
 <?php }
 else {
-		  header("location:login.php");
+		header("location:login.php");
 	} 
 ?>
