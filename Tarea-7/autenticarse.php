@@ -3,7 +3,7 @@ session_start();
 include('conexion.php');
 $email=$_POST['txtUser'];
 $password=md5($_POST['txtPassword']);
-	$sql="SELECT nombre,email,password,nivel FROM users WHERE email='$email' AND password='$password'";
+	$sql="SELECT nombre,email,password,nivel FROM users WHERE email='$email' AND password='$password'" ;
 	$result=$con->query($sql);
 	if($fila=$result->fetch_assoc())
 	{
@@ -13,7 +13,7 @@ $password=md5($_POST['txtPassword']);
 	}
 	else
 	{
-			echo '<script>alert(z"Email o contraseña incorrecta")</script>';
+			echo '<script>alert("Email o contraseña incorrecta")</script>';
 			echo "<script>location.href='login.php'</script>";
 	}
  ?>
