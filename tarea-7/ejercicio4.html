@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ejercicio4</title>
+        <script>
+        function mostrar(){
+            let padre=document.getElementById('enlacess');
+            let enlaces=padre.children;
+            let arr=[];
+            let cont=0;
+            Object.keys(enlaces).map(posicion=>{
+                if(enlaces[posicion].localName==="a"){
+                    cont++;
+                    arr.push(enlaces[posicion].origin)
+                }
+            })
+            let location="Numero de enlaces: "+cont;
+            let res=document.getElementById('resultado');
+            let parrafo=document.createElement('p');
+            let textoLoc=document.createTextNode(location);
+            parrafo.appendChild(textoLoc);
+            res.appendChild(parrafo);
+            arr.map(data=>{
+                let parraf=document.createElement('p');
+                let textoP=document.createTextNode(data)
+                parraf.appendChild(textoP)
+                res.appendChild(parraf)
+            })
+        }
+        </script>
+    </head>
+    <body onload="mostrar()">
+        <div id="enlacess">
+        <a href="http://www.google.com">google</a>
+        <a href="http://www.facebook.com">facebook</a>
+        <a href="http://www.instagram.com">instagram</a>
+        </div>
+        <div id="resultado">
+        </div>
+    </body>
+</html>

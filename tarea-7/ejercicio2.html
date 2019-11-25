@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ejercicio2</title>
+		<style type="text/css">
+			.inputcontainer{
+				width: 700px;
+				height: 200px;
+			}
+		input{
+			margin-left: 10px;
+			margin-top: 10px;
+			}
+		#volverAjugar{
+			display: none;
+			}
+		</style>
+	</head>
+	<body>
+	  	<div class="inputcontainer">	
+	  	</div>
+	  	<button onclick="aceptar()">aceptar</button>
+	  	<button id="volverAjugar" onclick="volverAjugar()">Volver a jugar</button>		
+ 	  	<div id="res"></div>
+		<script type="text/javascript">
+			let resultado="programa";
+			function limpiar(){
+					document.getElementsByClassName('inputcontainer')[0].innerHTML="";
+					document.getElementById('res').innerHTML="";
+					llenarInput();
+			}
+			function llenarInput(){
+				for(var i=0;i<resultado.length;i++){
+					document.getElementsByClassName('inputcontainer')[0].innerHTML+="<input type='text' class='inoutvalue'/>";
+				}
+
+				let s1=Math.floor(Math.random()*((resultado.length-1)-0+1))+1;
+				let s2=Math.floor(Math.random()*((resultado.length-1)-0+1))+1;
+
+				if(s1===s2){
+					if(s1<resultado.length){
+						s1++;
+					}else if(s2<resultado.length){
+						s2++;
+					}else s1--;
+				}
+				document.getElementsByClassName('inoutvalue')[s1].value=resultado[s1];
+				document.getElementsByClassName('inoutvalue')[s2].value=resultado[s2];
+			}
+			let cont=1;
+
+			function aceptar(){
+				let win=true;
+				for(let i=0;i<resultado.length;i++){
+					if(resultado[i]!==document.getElementsByClassName('inoutvalue')[i].value){
+						win=false;
+					}
+				}
+
+				if(win){
+					document.getElementById('res').innerHTML="ganaste";
+					document.getElementById('volverAjugar').style.display="block";				
+				}
+				else{
+					document.getElementById('res').innerHTML="incorrecto";
+				}
+				if(cont===7){
+					document.getElementById('res').innerHTML="perdiste";
+					document.getElementById('volverAjugar').style.display="block";
+					}
+					else{
+					cont++;
+				}
+			}
+			function volverAjugar(){
+				cont=1;
+				document.getElementById('volverAjugar').style.display="none";
+				limpiar();
+			}
+			console.log(1);
+			llenarInput();
+		</script>
+	</body>
+</html>
